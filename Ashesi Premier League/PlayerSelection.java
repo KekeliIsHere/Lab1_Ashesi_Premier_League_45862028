@@ -20,10 +20,8 @@ public class PlayerSelection {
         System.out.print("Enter Jersey Number-");
         int jerseyNumber=scanner.nextInt();
         System.out.println();
-        //Displaying the user details
         
-        
-        //Task 2
+        //Weight and age conversion
         double pound=0.45359237;
         double meter=100;
         double heightCm=height*meter;
@@ -35,8 +33,7 @@ public class PlayerSelection {
         System.out.println("Weight in kilograms-"+weightKG+"kg");
         System.out.println("Jersey Number-"+jerseyNumber);
        
-        
-        //Task4
+        //Checking Player Eligibiliy
         if (age>=18 && age<=35){
             if(weightKG<90){
                 String eligible="Eligible";
@@ -51,6 +48,7 @@ public class PlayerSelection {
             System.out.println("Eligibility:"+eligible);
         }
         
+        //Checking Player Category
         String category;
         if (age < 20) {
             category = "Rising Star";
@@ -61,6 +59,7 @@ public class PlayerSelection {
         }
         System.out.println("Category: " + category);
 
+        //Determining Player Position
         switch (jerseyNumber){
             case 1:
                 System.out.println("Position: Goalkeeper");
@@ -94,7 +93,7 @@ public class PlayerSelection {
                 System.out.println("Attacker jersey:No");
                 break;
         }
-
+        //Checking Player Lineup Decision
         String lineup;
         if (category.equals("Prime Player")) {
             if (weightKG < 80) {
@@ -107,6 +106,7 @@ public class PlayerSelection {
         }
         System.out.println("Lineup: " + lineup);
 
+        //Final Conversion
         String finalDecision = (age >= 18 && age <= 35 && weightKG < 90) ? "Play" : "Rest";
         System.out.println("Final Decision: " + finalDecision);
     }
