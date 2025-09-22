@@ -1,0 +1,106 @@
+//Kekeli Yao Agblobi
+//45862028
+import java.util.Scanner;
+public class FootballPlayer {
+    public static void main(String[] args) {
+        //Inputing the player details
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Player Name-");
+        String name=scanner.nextLine();
+        System.out.println();
+        System.out.print("Enter Age-");
+        int age=scanner.nextInt();
+        System.out.println();
+        System.out.print("Enter Height(m)-");
+        double height=scanner.nextDouble();
+        System.out.println();
+        System.out.print("Enter Weight(lbs)-");
+        double weight=scanner.nextDouble();
+        System.out.println();
+        System.out.print("Enter Jersey Number-");
+        int jerseyNumber=scanner.nextInt();
+        System.out.println();
+        //Displaying the user details
+        
+        
+        //Task 2
+        double pound=0.45359237;
+        double meter=100;
+        double heightCm=height*meter;
+        double weightKg=weight*pound;
+        int weightKG=(int)weightKg;
+        System.out.println("Player Name-"+name);
+        System.out.println("Age-"+age);
+        System.out.println("Height in centometers-"+heightCm+"cm");
+        System.out.println("Weight in kilograms-"+weightKG+"kg");
+        System.out.println("Jersey Number-"+jerseyNumber);
+       
+        
+        //Task4
+        if (age>=18 && age<=35){
+            if(weightKG<90){
+                String eligible="Eligible";
+                System.out.println("Eligibility:"+eligible);
+                
+            }else{
+                String eligible="Not Eligible";
+                System.out.println("Eligibility:"+eligible);
+            }
+        }else{
+            String eligible="Not Eligible";
+            System.out.println("Eligibility:"+eligible);
+        }
+        
+        String category;
+        if (age < 20) {
+            category = "Rising Star";
+        } else if (age <= 30) {
+            category = "Prime Player";
+        } else {
+            category = "Veteran";
+        }
+        System.out.println("Category: " + category);
+
+        switch (jerseyNumber){
+            case 1:
+                System.out.println("Position: Goalkeeper");
+                break;
+            case 2:
+            case 5:
+                System.out.println("Position: Defender");
+                break;
+            case 6:
+            case 8:
+                System.out.println("Position: Midfielder");
+                break;
+            case 7:
+            case 11:
+                System.out.println("Position: Winger");
+                break;
+            case 9:
+                System.out.println("Position: Striker");
+                break;
+            case 10:
+                System.out.println("Position: Playmaker");
+                break;
+            default:
+                System.out.println("Position: Player postion not known");
+                break;
+        }
+
+        String lineup;
+        if (category.equals("Prime Player")) {
+            if (weightKG < 80) {
+                lineup = "Starting Lineup";
+            } else {
+                lineup = "Bench";
+            }
+        } else {
+            lineup = "Bench";
+        }
+        System.out.println("Lineup: " + lineup);
+
+        String finalDecision = (age >= 18 && age <= 35 && weightKG < 90) ? "Play" : "Rest";
+        System.out.println("Final Decision: " + finalDecision);
+    }
+}
