@@ -64,27 +64,34 @@ public class FootballPlayer {
         switch (jerseyNumber){
             case 1:
                 System.out.println("Position: Goalkeeper");
+                System.out.println("Attacker jersey:No");
                 break;
             case 2:
             case 5:
                 System.out.println("Position: Defender");
+                System.out.println("Attacker jersey:No");
                 break;
             case 6:
             case 8:
                 System.out.println("Position: Midfielder");
+                System.out.println("Attacker jersey:No");
                 break;
             case 7:
             case 11:
                 System.out.println("Position: Winger");
+                System.out.println("Attacker jersey:Yes");
                 break;
             case 9:
                 System.out.println("Position: Striker");
+                System.out.println("Attacker jersey:Yes");
                 break;
             case 10:
                 System.out.println("Position: Playmaker");
+                System.out.println("Attacker jersey:Yes");
                 break;
             default:
                 System.out.println("Position: Player postion not known");
+                System.out.println("Attacker jersey:No");
                 break;
         }
 
